@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+    <link href="{{ url_for('static', filename='images/favicon.ico') }}" rel="icon" type="image/png" >
+    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-image: url(/static/images/home_bg.png)";>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+            </div>
+            <div class="logo-text">Maharlika</div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('message') }}">Send us a message</a></li>
+                    {% if session.logged_in %}
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="inbox-greet">HELLO, {{ scholar['nickname'] }}!</div>
+        <div class="message-count">
+            {% if message_count == 1 %}
+                You have received 1 message.
+            {% else %}
+                You have received {{ message_count }} messages.
+            {% endif %}
+        </div>
+        <div class="messages">
+            {% for message in messages %}
+            <div class="message-card">
+                <div class="message-sender">{{ message.sender_name }}</div>
+                <div class="message-text">{{ message.message_content }}</div>
+            </div>
+            {% endfor %}
+            <div class="message-card-empty"></div>
+            <div class="message-card-empty"></div>
+            <div class="message-card-empty"></div>
+        </div>
+    </div>
+</body>
+</html>

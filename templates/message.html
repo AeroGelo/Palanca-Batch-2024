@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palanca Batch 2024</title>
+    <link href="{{ url_for('static', filename='images/favicon.ico') }}" rel="icon" type="image/png">
+    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet">
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-image: url(/static/images/home_bg.png)">
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+            </div>
+            <div class="logo-text">Maharlika</div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('message') }}">Send us a message</a></li>
+                    {% if session.logged_in %}
+                    <li><a href="{{ url_for('inbox', scholar_id=session.scholar_id) }}">Inbox</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="title">Send us a message!</div>
+        <div class="grid-container">
+            <div class="grid-row">
+                {% for scholar_id, scholar in scholars.items() %}
+                <div class="grid-item">
+                    <a href="{{ url_for('profile', scholar_id=scholar_id) }}">
+                        <div class="scholar-card">
+                            <img data-src="{{ url_for('static', filename='images/scholarpfp-' ~ scholar_id ~ '.png') }}" alt="Scholar PFP" class="scholar-pfp lazyload">
+                            <div class="scholar-nick">{{ scholar['nickname'] }}</div>
+                            <div class="scholar-name">{{ scholar['fullname'] | safe }}</div>
+                            <div class="scholar-desc">{{ scholar.description | safe }}</div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.1.0/lazyload.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var lazyloadImages = document.querySelectorAll('.lazyload');
+            var lazyload = new LazyLoad({
+                elements_selector: '.lazyload'
+            });
+        });
+    </script>
+</body>
+</html>
