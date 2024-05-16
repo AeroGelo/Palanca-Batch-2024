@@ -1,8 +1,3 @@
-# THINGS TO DO......
-# ANONYMOUS PROBLEM (EVERY MESSAGE IS ANONYMOUS HOW TO FIX)
-# PICTURES
-# WEBSITE ACTUAL
-
 import os
 import csv
 import re
@@ -738,5 +733,5 @@ def message():
 def loginpage():
     return render_template('login.html', scholar_id=scholar_id)
 
-if __name__ == "__main__": 
-    serve(app, host="0.0.0.0", port=8000)
+if __name__ == '__main__':
+    app.run(debug=True)
