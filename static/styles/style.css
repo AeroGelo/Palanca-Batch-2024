@@ -248,21 +248,25 @@ p {
 }
 
 .grid-container {
-    margin-left: 30px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    margin: 0 auto; 
+    max-width: 1200px; 
 }
 
 .grid-row {
-    width: 100%;
     display: flex;
+    justify-content: center; 
     flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%; 
+    gap: 20px;
 }
 
 .grid-item {
-    flex-basis: calc(33.33% - 5px);
-    margin-bottom: 40px;
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
     box-sizing: border-box;
 }
 
@@ -272,15 +276,13 @@ p {
 
 @media (max-width: 1200px) {
     .grid-item {
-        flex-basis: calc(50% - 10px);
-        margin: 0 5px;
+        flex-basis: calc(50% - 20px);
     }
 }
 
 @media (max-width: 768px) {
     .grid-item {
-        flex-basis: calc(100% - 10px);
-        margin: 0 5px;
+        flex-basis: calc(100% - 20px);
     }
 }
 
