@@ -256,18 +256,32 @@ p {
 .grid-row {
     width: 100%;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    justify-content: space-between; /* Distribute items evenly */
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .grid-item {
-    flex-basis: calc(33.33% - 5px); /* Adjust the width to fit three items per row */
+    flex-basis: calc(33.33% - 5px);
     margin-bottom: 40px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box;
 }
 
 .grid-item a {
     text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    .grid-item {
+        flex-basis: calc(50% - 10px);
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-item {
+        flex-basis: calc(100% - 10px);
+        margin: 0 5px;
+    }
 }
 
 .scholar-card {
