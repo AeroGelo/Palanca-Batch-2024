@@ -713,9 +713,10 @@ p {
         height: 260px;
         margin-top: 28%;
         margin-left: -9%;
+        max-width: 100%;
         position: absolute;
     }
-
+    
     .text {
         display: none;
     }
