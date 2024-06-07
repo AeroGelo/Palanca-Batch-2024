@@ -807,157 +807,156 @@ p {
 
     /* PROFILE */
 
-    .scholar-portrait {
-        width: 29.5%; 
-        height: 89%;
-        bottom: 0;
-        left: 0; 
-        position: absolute;
+    .profile-image, .profile-info, .sender-info {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .profile-image img {
+        width: 100%; 
+        height: auto;
     }
 
     .profile-nick {
         font-family: 'Aclonica', sans-serif;
-        font-size: 60px;
+        font-size: 30px;
         font-weight: bold;
         color: #E39520;
-        margin-top: 6.5%;
-        margin-left: 35.5%;
-        text-align: left;
-        position: absolute;
+        margin-top: 142%;
+        margin-left: 1%;
     }
 
     .profile-sectioncore {
         font-family: 'Bayon', sans-serif;
-        font-size: 25px;
+        font-size: 22px;
         color: #00296B;
-        margin-top: 8%;
-        margin-left: 74%;
-        text-align: right;
-        position: absolute;
+        margin-top: 149%;
+        margin-left: 1.5%;
     }
 
     .profile-desc {
         font-family: 'Be Vietnam Pro', sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         font-style: italic;
         color: #00296B;
-        margin-top: 11.9%;
-        margin-left: 35.5%;
-        max-width: 50%;
-        text-align: left;
-        line-height: 1.15;
-        position: absolute;
+        margin-top: 165%;
+        margin-left: 1.5%;
+        max-width: 90%;
     }
 
     .form-row {
         display: flex;
-        align-items: center; /* Ensure items are vertically centered */
-        justify-content: space-between; /* Space out items evenly */
-        margin-top: 15%;
-        padding: 0 20px; /* Add padding to ensure spacing on the sides */
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding: 0 10px;
     }
 
     .sender-name-label {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
         color: #00296B;
-        margin-top: 5%;
-        margin-left: 35%;
+        margin-top: 210%;
+        margin-left: -0.5%;
         text-align: left;
-        position: absolute;
+        z-index: 500;
     }
 
-    .sender-name {
-        left: 35.5%;
+    .anon-label {
+        font-size: 18px;
+        font-weight: bold;
+        color: #00296B;
+        margin-top: 235%;
+        margin-left: -0.5%;
+        text-align: left;
+        z-index: 500;
+    }
+
+    .message-label {
+        font-size: 18px;
+        font-weight: bold;
+        color: #00296B;
+        margin-top: 6%;
+        margin-left: 1.7%;
+        text-align: left;
+        z-index: 500;
+    }
+
+    .sender-name{
+        width: calc(100% - 95px);
         padding: 10px;
         font-size: 16px;
-        width: 28%;
         border: 2px solid #C6DBF0;
         background-color: #C6DBF0;
         border-radius: 17px;
-        margin-top: 10%;
-        text-align: left;
-        margin-right: 20px; /* Space between the sender name and checkbox */
+        margin-top: 210%;
+        margin-left: -15.5%;
+        position: absolute;
+    }
+
+    .sender-message{
+        width: calc(100% - 35px);
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #C6DBF0;
+        background-color: #C6DBF0;
+        border-radius: 17px;
+        margin-top: 13%;
+        margin-left: -12%;
+        position: absolute;
+    }
+
+    .send-button {
+        width: calc(100% - 235px);
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #C6DBF0;
+        background-color: #C6DBF0;
+        border-radius: 17px;
+        margin-top: 44%;
+        margin-left: 33%;
         position: absolute;
     }
 
     .toggle-btn {
         position: relative;
         display: flex;
-        align-items: center; /* Ensure alignment with sender name */
+        align-items: center;
     }
-    
+
     .toggle-btn input[type="checkbox"] {
-        display: inline-block;
         display: none;
     }
-    
+
     .checkbox-anon {
-        left: 2800%;
         width: 42px;
         height: 42px;
+        margin-top: 2250%;
+        margin-left: -2515%;
         border-radius: 50%;
-        margin-top: 365%;
         background-color: #C6DBF0;
         transition: background-color 0.3s ease;
         cursor: pointer;
-        display: inline-block; /* Ensure the custom checkbox is inline */
-        position: relative;
     }
-    
+
     .toggle-btn input[type="checkbox"]:checked + .checkbox-anon {
         background-color: #00296B;
     }
 
-    .anon-label {
-        font-size: 20px;
-        font-weight: bold;
-        color: #00296B;
-        margin-top: 7%;
-        margin-left: 75%;
-        text-align: left;
-        position: absolute;
-    }
-
-    .message-label {
-        font-size: 20px;
-        font-weight: bold;
-        color: #00296B;
-        margin-top: 26.6%;
-        margin-left: 35.5%;
-        text-align: left;
-        position: absolute;
-    }
-
-    .sender-message {
-        width: 56%;
-        height: 8em;
-        padding: 10px;
-        font-size: 16px;
-        border: 2px solid #C6DBF0;
-        background-color: #C6DBF0;
-        border-radius: 17px;
-        margin-top: 29.7%;
-        margin-left: -15.1%;
-        margin-bottom: 3%;
-        text-align: left;
-        position: absolute
-    }
-
     .send-button {
-        font-family: 'Bayon', sans-serif;   
-        letter-spacing: 1px; 
-        padding: 6px 20px;
+        font-family: 'Bayon', sans-serif;
+        letter-spacing: 1px;
+        padding: 10px;
         background-color: #00296B;
         color: #fff;
-        font-size: 17px;
+        font-size: 16px;
         font-weight: bold;
         border: none;
         border-radius: 17px;
-        margin-top: 34.8%;
-        position: absolute;
-        margin-left: 35.5%;
+        margin-top: 20px;
         cursor: pointer;
+        position: relative;
     }
 
     .send-button:hover {
