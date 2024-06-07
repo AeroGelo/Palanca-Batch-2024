@@ -69,7 +69,7 @@ nav ul li a:hover {
 }
 
 .pics {
-    width: 650px;
+    width: 145%;
     border-radius: 10px;
 }
 
@@ -148,7 +148,7 @@ body {
 
 .heading2 {
     font-family: 'Bayon', sans-serif;
-    font-size: 50px;
+    font-size: 312.5%;
     color: #C6DBF0;
     text-align: left;
     margin-top: 110px;
@@ -159,7 +159,7 @@ body {
 
 .heading1 {
     font-family: 'Aclonica', sans-serif;
-    font-size: 85px;
+    font-size: 531.25%;
     color: #fffedc;
     text-align: left;
     margin-top: -2.5%;
@@ -169,7 +169,7 @@ body {
 
 .subh {
     font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 20px;
+    font-size: 125%;
     color: #ffb649;
     text-align: left;
     padding-right: 10%;
@@ -248,41 +248,26 @@ p {
 }
 
 .grid-container {
+    margin-left: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    margin: 0 auto; 
 }
 
 .grid-row {
+    width: 100%;
     display: flex;
-    justify-content: center; 
-    flex-wrap: wrap;
-    width: 100%; 
-    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: space-between; /* Distribute items evenly */
 }
 
 .grid-item {
-    flex-basis: calc(33.33% - 40px);
-    margin-bottom: 20px;
-    box-sizing: border-box;
+    flex-basis: calc(33.33% - 5px); /* Adjust the width to fit three items per row */
+    margin-bottom: 40px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .grid-item a {
     text-decoration: none;
-}
-
-@media (max-width: 1200px) {
-    .grid-item {
-        flex-basis: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 768px) {
-    .grid-item {
-        flex-basis: calc(100% - 20px);
-    }
 }
 
 .scholar-card {
@@ -373,50 +358,60 @@ p {
     position: absolute;
 }
 
+.form-row {
+    display: flex;
+    align-items: center; /* Ensure items are vertically centered */
+    justify-content: space-between; /* Space out items evenly */
+    margin-top: 15%;
+    padding: 0 20px; /* Add padding to ensure spacing on the sides */
+}
+
 .sender-name-label {
     font-size: 20px;
     font-weight: bold;
     color: #00296B;
-    margin-top: 22%;
-    margin-left: 35.5%;
+    margin-top: 5%;
+    margin-left: 35%;
     text-align: left;
     position: absolute;
 }
 
 .sender-name {
-    width: 25%;
+    left: 35.5%;
     padding: 10px;
     font-size: 16px;
+    width: 28%;
     border: 2px solid #C6DBF0;
     background-color: #C6DBF0;
     border-radius: 17px;
-    margin-top: 23.8%;
-    margin-left: -13.8%;
-    margin-bottom: 3%;
+    margin-top: 10%;
     text-align: left;
-    position: absolute
+    margin-right: 20px; /* Space between the sender name and checkbox */
+    position: absolute;
 }
 
 .toggle-btn {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center; /* Ensure alignment with sender name */
 }
   
 .toggle-btn input[type="checkbox"] {
     display: inline-block;
+    display: none;
 }
   
 .checkbox-anon {
-    transform: translate(-50%, -50%);
+    left: 2800%;
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    margin-top: 1920%;
-    margin-left: 2326%;
+    margin-top: 365%;
     background-color: #C6DBF0;
     transition: background-color 0.3s ease;
-    position: absolute;
     cursor: pointer;
+    display: inline-block; /* Ensure the custom checkbox is inline */
+    position: relative;
 }
   
 .toggle-btn input[type="checkbox"]:checked + .checkbox-anon {
@@ -427,8 +422,8 @@ p {
     font-size: 20px;
     font-weight: bold;
     color: #00296B;
-    margin-top: 23%;
-    margin-left: 82.9%;
+    margin-top: 7%;
+    margin-left: 75%;
     text-align: left;
     position: absolute;
 }
@@ -640,6 +635,9 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 10px; /* Adjust the gap between columns as needed */
 }
+
+
+
 
 
 
