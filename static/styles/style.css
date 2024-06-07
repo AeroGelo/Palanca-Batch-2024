@@ -371,7 +371,7 @@ p {
     font-weight: bold;
     color: #00296B;
     margin-top: 5%;
-    margin-left: 35%;
+    margin-left: 34.5%;
     text-align: left;
     position: absolute;
 }
@@ -402,7 +402,7 @@ p {
 }
   
 .checkbox-anon {
-    left: 2800%;
+    left: 3000%;
     width: 42px;
     height: 42px;
     border-radius: 50%;
@@ -422,8 +422,8 @@ p {
     font-size: 20px;
     font-weight: bold;
     color: #00296B;
-    margin-top: 7%;
-    margin-left: 75%;
+    margin-top: 10%;
+    margin-left: 73%;
     text-align: left;
     position: absolute;
 }
@@ -432,7 +432,7 @@ p {
     font-size: 20px;
     font-weight: bold;
     color: #00296B;
-    margin-top: 26.6%;
+    margin-top: 2%;
     margin-left: 35.5%;
     text-align: left;
     position: absolute;
@@ -440,14 +440,14 @@ p {
 
 .sender-message {
     width: 56%;
-    height: 8em;
+    height: 10em;
     padding: 10px;
     font-size: 16px;
     border: 2px solid #C6DBF0;
     background-color: #C6DBF0;
     border-radius: 17px;
-    margin-top: 29.7%;
-    margin-left: -15.1%;
+    margin-top: 4%;
+    margin-left: -14.7%;
     margin-bottom: 3%;
     text-align: left;
     position: absolute
@@ -463,9 +463,9 @@ p {
     font-weight: bold;
     border: none;
     border-radius: 17px;
-    margin-top: 34.8%;
+    margin-top: 11%;
     position: absolute;
-    margin-left: 35.5%;
+    margin-left: 35.7%;
     cursor: pointer;
 }
 
